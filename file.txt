@@ -1,0 +1,38 @@
+<!-- start header -->
+    <header>
+        <nav class="">
+            <div class="container bg-white max-w-full h-14 flex justify-between items-center p-2 font-primary">
+                <div class="text-lg mx-2 flex items-center gap-1.5">
+                    <img src="./src/logo.png" alt="logo" class="size-6">
+                    <h2 class="font-bold">LaslesVPN</h2>
+                </div>
+
+                <ul class="hidden md:flex space-x-8 mx-4 ">
+                    <li class="hover:text-primary text-gray-600 cursor-pointer">Home</li>
+                    <li class="hover:text-primary text-gray-600 cursor-pointer">Service</li>
+                    <li class="hover:text-primary text-gray-600 cursor-pointer">About</li>
+                    <li class="hover:text-primary text-gray-600 cursor-pointer">Contact</li>
+                </ul>
+
+            </div>
+
+        </nav>
+    </header>
+    <!-- end header -->
+
+    <!-- start hero -->
+    <section class="container max-w-[1440px] mx-auto px-4 py-28 flex flex-col md:flex-row items-center gap-12">
+        <!-- left content -->
+        <div>
+            <h1 class="lg:text-5xl md:text-4xl text-4xl font-bold">Want anything to be easy with <span
+                    class="font-bold">LaslesVPN.</span></h1>
+            <p>Provide a network for all your needs with ease and fun using LaslesVPN discover interesting features from
+                us.</p>
+            <button class="bg-primary text-white text-sm p-1 w-28 hover:cursor-pointer rounded-sm">Get Started</button>
+        </div>
+
+        <!-- right content -->
+        <div>
+            <img src="./src/banner.png" alt="banner">
+        </div>
+    </section>
