@@ -10,7 +10,7 @@
 <body>
     <!-- header start -->
     <header>
-        <nav class=" max-w-full container mx-auto px-4 py-4 flex justify-between items-center shadow-lg">
+        <nav class="max-w-full container mx-auto px-4 py-4 flex justify-between items-center shadow-lg relative">
             <!-- logo -->
             <a href="/">
                 <div class="text-2xl font-bold flex items-center gap-2">
@@ -19,38 +19,99 @@
                 </div>
             </a>
 
-            <!-- menu items -->
-            <ul class="hidden md:flex space-x-8 ">
-                <li>
-                    <a href="#" class="text-gray-600 hover:text-primary">Home</a>
-                </li>
-                <li>
-                    <a href="#" class="text-gray-600 hover:text-primary">Contact</a>
-                </li>
-                <li>
-                    <a href="#" class="text-gray-600 hover:text-primary">Service</a>
-                </li>
-                <li>
-                    <a href="#" class="text-gray-600 hover:text-primary">About</a>
-                </li>
+            <!-- Hamburger Button (visible on md and smaller) -->
+            <button id="menu-btn" class="md:hidden flex flex-col justify-center items-center w-10 h-10">
+                <span class="block w-6 h-0.5 bg-black mb-1 transition-all duration-300"></span>
+                <span class="block w-6 h-0.5 bg-black mb-1 transition-all duration-300"></span>
+                <span class="block w-6 h-0.5 bg-black transition-all duration-300"></span>
+            </button>
+
+            <!-- menu items (hidden on small screens) -->
+            <ul id="menu" class="hidden md:flex space-x-8 text-center">
+                <li><a href="#" class="text-gray-600 hover:text-primary">Home</a></li>
+                <li><a href="#" class="text-gray-600 hover:text-primary">Contact</a></li>
+                <li><a href="#" class="text-gray-600 hover:text-primary">Service</a></li>
+                <li><a href="#" class="text-gray-600 hover:text-primary">About</a></li>
             </ul>
         </nav>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu"
+            class="md:hidden hidden bg-white shadow-md absolute top-full left-0 w-full px-4 py-4 space-y-2 transition-all duration-500 z-10">
+            <a href="#" class="block text-gray-700 hover:text-primary">Home</a>
+            <a href="#" class="block text-gray-700 hover:text-primary">Contact</a>
+            <a href="#" class="block text-gray-700 hover:text-primary">Service</a>
+            <a href="#" class="block text-gray-700 hover:text-primary">About</a>
+        </div>
     </header>
+
     <!-- header end -->
 
 
     <!-- hero start -->
     <section class="max-w-[1440px] container mx-auto px-4 py-28 flex flex-col md:flex-row items-center gap-12 ">
         <!-- left -->
-        <div>   
-            <h1 class="lg:text-6xl md:text-5xl text-4xl text-heading-text font-semibold leading-tight">Want anything to be easy with <span class="font-bold">LaslesVPN.</span></h1>
-            <p class="mt-5">Provide a network for all your needs with easa and fun using LaslesVPN discover interesting featuress from us.</p>
-            <button class="mt-5 text-white font-bold p-2 w-40 shadow-lg hover:scale-90 duration-1000 hover:shadow-xl hover:bg-red-600 cursor-pointer rounded-lg bg-primary ">Get Started</button>
+        <div>
+            <h1 class="lg:text-6xl md:text-5xl text-4xl text-heading-text font-semibold leading-tight">Want anthing to
+                be easy with <span class="font-bold">LaslesVPN.</span></h1>
+            <p class="mt-5">Provide a network for all your needs with easa and fun using LaslesVPN discover interesting
+                featuress from us.</p>
+            <button
+                class="mt-5 text-white font-bold p-2 w-40 shadow-lg hover:scale-90 duration-1000 hover:shadow-xl hover:bg-red-600 cursor-pointer rounded-lg bg-primary focus:outline-none ">Get
+                Started</button>
         </div>
 
         <!-- right -->
-        <div class="mt-8">
-            <img src="./src/banner.png" alt="banner" >
+        <div class="md:w-1/2">
+            <img src="./src/banner.png" alt="banner">
+        </div>
+    </section>
+    <!-- hero end -->
+
+
+    <section class="section-container">
+        <div class="bg-white p-8 rounded-xl shadow-lg">
+            <div
+                class="flex flex-col md:flex-row items-center justify-around divide-y md:divide-y-0 md:divide-x divide-gray-200">
+
+                <!-- user stats -->
+                <div class="flex items-center gap-6 px-12 py-6 md:py-0">
+                    <div class="bg-primary/65 shrink-0 rounded-full p-5">
+                        <img src="./src/user.png" alt="user" class="size-6">
+                    </div>
+                    <div>
+                        <h3 class="text-3xl font-bold text-gray-900">90+</h3>
+                        <p class="text-lg">Users</p>
+                    </div>
+                </div>
+
+                <!-- location stats -->
+                <div class="flex items-center gap-6 px-12 py-6 md:py-0">
+                    <div class="flex items-center gap-6 px-12 py-6 md:py-0">
+                        <div class="bg-primary/65 shrink-0 p-5 rounded-full">
+                            <img src="./src/location.png" alt="location" class="size-6">
+                        </div>
+                        <div>
+                            <h3 class="text-3xl font-bold text-gray-900">30+</h3>
+                            <p class="text-lg">Location</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- server stats -->
+                <div class="flex items-center gap-6 px-12 py-6 md:py-0">
+                    <div class="flex items-center gap-6 px-12 py-6 md:py-0">
+                        <div class="bg-primary/65 shrink-0 p-5 rounded-full">
+                            <img src="./src/storage.png" alt="server" class="size-6">
+                        </div>
+                        <div>
+                            <h3 class="text-3xl font-bold text-gray-900">50+</h3>
+                            <p class="text-lg">Server</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </section>
 </body>
