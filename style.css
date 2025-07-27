@@ -10,6 +10,10 @@
 
 @layer{
     .section-container{
-        @apply max-w-[1440px] container px-4 py-5;
+        @apply max-w-[1440px] container px-4 py-20;
     }
+}
+
+@apply{
+    ::-webkit-scrollbar:disabled
 }
